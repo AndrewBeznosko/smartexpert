@@ -1,45 +1,82 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Carousel</a>
+    <!-- fixed header -->
+    <nav class="navbar navbar-expand-md fixed-top">
+      <a class="navbar-brand" href="#"
+        ><img src="./assets/img/logo.svg" alt=""
+      /></a>
       <button
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarCollapse"
-        aria-controls="navbarCollapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon">
+          <img src="./assets/img/nav/burger.svg" alt="burger" />
+        </span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdown01"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Продукты <img src="./assets/img/nav/arrow.svg" alt="arrow"
+            /></a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#platforma_dlya_obuchenia"
+                >Платформа для онлайн-обучения</a
+              >
+              <a class="dropdown-item" href="#marketing_instrument"
+                >Инструменты маркетинга</a
+              >
+              <a class="dropdown-item" href="#prodvizhenie_lichnogo_brenda"
+                >Продвижение личного бренда</a
+              >
+              <a class="dropdown-item" href="#globalnyi_poisk"
+                >Глобальный поиск экспертов</a
+              >
+              <a class="dropdown-item" href="#delovaya_socialnaya_set"
+                >Деловая социальная сеть</a
+              >
+            </div>
+          </li>
+          <li class="nav-item active d-none">
+            <a class="nav-link" href="#">Расписание</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#produsirovanie">Продюсирование</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://p.smartexpert.net/author-rating"
+              >Наши эксперты</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link" href="#tarifs">Цены</a>
           </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input
-            class="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-            Search
-          </button>
+        <form class="form-inline my-2 my-lg-0">
+          <a href="#" class="btn btn-success-1 my-2 my-sm-0 mr-sm-2 d-none"
+            >Пробная версия</a
+          >
+          <a
+            href="https://p.smartexpert.net/login"
+            class="btn btn-success-2 my-2 my-sm-0"
+            >Войти</a
+          >
         </form>
       </div>
     </nav>
+    <!-- / fixed header -->
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -54,6 +91,8 @@
 </template>
 
 <style lang="scss">
+@import "./assets/scss/style";
+
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

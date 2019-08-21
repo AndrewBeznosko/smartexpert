@@ -1,0 +1,107 @@
+.sec_9 {
+    padding: 76px 0 84px;
+    background: #fbf3e9;
+
+    .sec_title {
+        margin-bottom: 26px;
+    }
+
+    .card_profile {
+        padding: 50px 0 48px;
+
+        i {
+            max-width: 285px;
+            min-height: 250px;
+        }
+
+        p {
+            min-height: 42px;
+            font-weight: 600;
+            max-width: 261px;
+        }
+    }
+
+    .abs_pic {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 113%;
+    }
+}
+
+.sleder_wrapp {
+    position: relative;
+}
+
+.arrow-next,
+.arrow-prev {
+    position: absolute;
+    top: 50%;
+    display: block;
+    cursor: pointer;
+    opacity: .5;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    svg {
+        width: 25px;
+        height: 47px;
+    }
+}
+
+.arrow-prev {
+    left: -40px;
+    transform: translateY(-50%);
+    display: block;
+}
+
+.arrow-next {
+    right: -40px;
+    transform: translateY(-50%) rotateY(180deg);
+}
+
+@media (max-width: 767.98px) {
+    .sec_9 {
+        padding: 30px 0 0;
+        overflow: hidden;
+
+        .card_profile {
+            padding: 15px;
+
+            .icon {
+                position: initial;
+                margin: 0 auto;
+            }
+
+            h3 {
+                margin: 20px auto 10px;
+                text-align: center;
+                max-width: 300px;
+                height: auto;
+            }
+
+            p {
+                text-align: center;
+                margin: 0 auto;
+            }
+
+            i {
+                font-size: 14px;
+                margin-top: 20px;
+                min-height: 230px;
+            }
+        }
+
+        .sec_title {
+            margin-bottom: 0;
+        }
+
+        .abs_pic {
+            left: -225%;
+            top: 144%;
+            width: 765%;
+        }
+    }
+}
