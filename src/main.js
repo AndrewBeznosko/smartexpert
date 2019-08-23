@@ -7,7 +7,7 @@ import router from "./router";
 import "popper.js/dist/popper.min.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-// import "./assets/js/script.js";
+import "./assets/js/script.js";
 import "./assets/scss/style.scss";
 
 Vue.config.productionTip = false;
