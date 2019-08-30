@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="main">
     <!-- sec_1 -->
     <section class="sec sec_1">
       <div class="container">
@@ -585,15 +585,24 @@
         <div class="screen_list">
           <div id="prodvizhenie_lichnogo_brenda" class="row align-items-center">
             <div class="col-md-6">
-              <div class="slide_bg">
-                <div class="imageSlider">
-                  <img
-                    src="../assets/img/sec_8/prodvizhenie_lichnogo_brenda_1.jpg"
-                  />
-                  <img
-                    src="../assets/img/sec_8/prodvizhenie_lichnogo_brenda_1.jpg"
-                  />
-                </div>
+              <div class="carusel-wrapp">
+                <carousel
+                  :perPage="1"
+                  :navigationEnabled="true"
+                  :navigationNextLabel="next"
+                  :navigationPrevLabel="prev"
+                >
+                  <slide>
+                    <img
+                      src="../assets/img/sec_8/prodvizhenie_lichnogo_brenda_1.jpg"
+                    />
+                  </slide>
+                  <slide>
+                    <img
+                      src="../assets/img/sec_8/prodvizhenie_lichnogo_brenda_1.jpg"
+                    />
+                  </slide>
+                </carousel>
               </div>
             </div>
             <div class="col-md-6">
@@ -636,15 +645,24 @@
           </div>
           <div id="platforma_dlya_obuchenia" class="row align-items-center">
             <div class="col-md-6">
-              <div class="slide_bg">
-                <div class="imageSlider">
-                  <img
-                    src="../assets/img/sec_8/platforma_dlya_obuchenia_1.jpg"
-                  />
-                  <img
-                    src="../assets/img/sec_8/platforma_dlya_obuchenia_1.jpg"
-                  />
-                </div>
+              <div class="carusel-wrapp">
+                <carousel
+                  :perPage="1"
+                  :navigationEnabled="true"
+                  :navigationNextLabel="next"
+                  :navigationPrevLabel="prev"
+                >
+                  <slide>
+                    <img
+                      src="../assets/img/sec_8/platforma_dlya_obuchenia_1.jpg"
+                    />
+                  </slide>
+                  <slide>
+                    <img
+                      src="../assets/img/sec_8/platforma_dlya_obuchenia_1.jpg"
+                    />
+                  </slide>
+                </carousel>
               </div>
             </div>
             <div class="col-md-6">
@@ -686,11 +704,24 @@
           </div>
           <div id="globalnyi_poisk" class="row align-items-center">
             <div class="col-md-6">
-              <div class="slide_bg">
-                <div class="imageSlider">
-                  <img src="../assets/img/sec_8/globalnyi_poisk_1.jpg" />
-                  <img src="../assets/img/sec_8/globalnyi_poisk_1.jpg" />
-                </div>
+              <div class="carusel-wrapp">
+                <carousel
+                  :perPage="1"
+                  :navigationEnabled="true"
+                  :navigationNextLabel="next"
+                  :navigationPrevLabel="prev"
+                >
+                  <slide>
+                    <img
+                      src="../assets/img/sec_8/prodvizhenie_lichnogo_brenda_1.jpg"
+                    />
+                  </slide>
+                  <slide>
+                    <img
+                      src="../assets/img/sec_8/prodvizhenie_lichnogo_brenda_1.jpg"
+                    />
+                  </slide>
+                </carousel>
               </div>
             </div>
             <div class="col-md-6">
@@ -1095,3 +1126,34 @@
     <!-- / footer -->
   </main>
 </template>
+
+<script>
+import { Carousel, Slide } from "vue-carousel";
+
+export default {
+  name: "About",
+  props: {
+    msg: String
+  },
+  components: {
+    Carousel,
+    Slide
+  },
+  computed: {
+    prev() {
+      return "<svg width='15' height='28' viewBox='0 0 15 28' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M14.0532 27.2416C14.4224 26.8724 14.4224 26.2724 14.0532 25.9032L2.26144 14.1346L14.0532 2.34284C14.4224 1.97363 14.4224 1.37366 14.0532 1.00445C13.684 0.635236 13.084 0.635236 12.7148 1.00445L0.276925 13.4423C0.0923196 13.6269 1.54154e-05 13.8577 1.54184e-05 14.1115C1.54211e-05 14.3423 0.0923197 14.5961 0.276925 14.7807L12.7148 27.2185C13.084 27.6108 13.684 27.6108 14.0532 27.2416Z' fill='#BDBDBD'/></svg>";
+    },
+    next() {
+      return "<svg width='15' height='28' viewBox='0 0 15 28' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0.628471 1.00155C0.259258 1.37076 0.259258 1.97073 0.628471 2.33994L12.4202 14.1086L0.628472 25.9003C0.259259 26.2695 0.259259 26.8695 0.628472 27.2387C0.997684 27.6079 1.59766 27.6079 1.96687 27.2387L14.4047 14.8009C14.5893 14.6163 14.6816 14.3855 14.6816 14.1317C14.6816 13.9009 14.5893 13.6471 14.4047 13.4625L1.96687 1.02462C1.59765 0.632334 0.997683 0.632336 0.628471 1.00155Z' fill='#BDBDBD'/></svg>";
+    }
+  }
+};
+</script>
+
+<style scoped>
+.VueCarousel-dot {
+  padding: 0 !important;
+  border: solid 1px #4f4f4f;
+  margin: 10px 10px;
+}
+</style>

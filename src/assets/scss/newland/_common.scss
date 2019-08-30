@@ -155,6 +155,7 @@ h2 {
     background-color: rgba(229, 229, 229, .5);
 }
 
+.VueCarousel-slide,
 .slide_bg {
     display: block;
     width: 100%;
@@ -167,7 +168,8 @@ h2 {
     position: relative;
 
     & > img,
-    .lSSlideOuter {
+    .lSSlideOuter,
+    .VueCarousel-slide img, {
         display: inline-block;
         position: absolute;
         width: 99.8%;
@@ -177,6 +179,21 @@ h2 {
         transform: translateX(-50%);
     }
 }
+
+.VueCarousel-pagination {
+    position: absolute;
+    bottom: 0;
+}
+
+.carusel-wrapp {
+    box-shadow: 0 0 1.5625rem rgba(0,0,0,0.15);
+    position: relative;
+}
+
+.VueCarousel-slide {
+    box-shadow: none;
+}
+
 //slider styles
 
 .lSAction > a {

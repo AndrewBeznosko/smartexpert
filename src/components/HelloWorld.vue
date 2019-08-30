@@ -8,6 +8,16 @@
         >vue-cli documentation</a
       >.
     </p>
+    <hr class="my-5" />
+    <carousel :perPage="1">
+      <slide>
+        Slide 1 Content
+      </slide>
+      <slide>
+        Slide 2 Content
+      </slide>
+    </carousel>
+    <hr class="my-5" />
     <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
@@ -87,10 +97,16 @@
 </template>
 
 <script>
+import { Carousel, Slide } from "vue-carousel";
+
 export default {
   name: "HelloWorld",
   props: {
     msg: String
+  },
+  components: {
+    Carousel,
+    Slide
   }
 };
 </script>
