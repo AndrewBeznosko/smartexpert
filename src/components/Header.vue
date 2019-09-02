@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-md fixed-top">
-    <a class="navbar-brand" href="#"
+    <router-link to="/" class="navbar-brand"
       ><img src="@/assets/img/logo.svg" alt=""
-    /></a>
+    /></router-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -51,7 +51,9 @@
           <a class="nav-link" href="#">Расписание</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#produsirovanie">Продюсирование</a>
+          <router-link to="/producing" class="nav-link"
+            >Продюсирование</router-link
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://p.smartexpert.net/author-rating"
@@ -59,7 +61,7 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#tarifs">Цены</a>
+          <router-link to="/product-prices" class="nav-link">Цены</router-link>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

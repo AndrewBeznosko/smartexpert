@@ -100,7 +100,9 @@
     padding: 1rem;
 
     &:focus,
-    &:hover {
+    &:hover,
+    &.router-link-active,
+    &.router-link-exact-active {
         background-color: rgba(80, 155, 121, .5);
     }
 }
