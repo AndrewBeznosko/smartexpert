@@ -96,6 +96,23 @@ body {
     }
 }
 
+.btn.btn-blue {
+    background: #557FAF;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 137px;
+    padding: 7px 15px;
+
+    &:hover {
+        background: #355982;
+    }
+}
+
 .h1,
 .h2,
 .h3,
@@ -151,11 +168,18 @@ h2 {
     }
 }
 
+.card {
+    background: #FFFFFF;
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
+    border-radius: 10px;
+    border: none;
+}
+
 .embed-responsive {
     background-color: rgba(229, 229, 229, .5);
 }
 
-.VueCarousel-slide,
+.sec_8 .VueCarousel-slide,
 .slide_bg {
     display: block;
     width: 100%;
@@ -292,6 +316,26 @@ h2 {
         }
     }
 }
+
+// tag_list //////////////////////////
+.tag_list {
+    margin: 0 -5px -11px;
+
+    span {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 130%;
+        text-align: center;
+        color: #FFFFFF;
+        padding: 7px 13px;
+        background: #60C09E;
+        border-radius: 3px;
+        margin: 0 5px 11px;
+        display: inline-block;
+        min-width: 74px;
+    }
+}
+
 @media (max-width: 767.98px) {
     body {
         padding-top: 40px;

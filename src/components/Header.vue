@@ -47,8 +47,10 @@
             >
           </div>
         </li>
-        <li class="nav-item active d-none">
-          <a class="nav-link" href="#">Расписание</a>
+        <li class="nav-item active">
+          <router-link to="/course-schedule" class="nav-link"
+            >Расписание</router-link
+          >
         </li>
         <li class="nav-item">
           <router-link to="/producing" class="nav-link"

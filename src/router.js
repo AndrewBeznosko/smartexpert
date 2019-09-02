@@ -30,6 +30,11 @@ export default new Router({
       path: "/product-prices",
       name: "ProductPrices",
       component: () => import("./views/ProductPrices.vue")
+    },
+    {
+      path: "/course-schedule",
+      name: "CourseSchedule",
+      component: () => import("./views/CourseSchedule.vue")
     }
   ]
 });
