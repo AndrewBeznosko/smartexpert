@@ -1,8 +1,15 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
+// import Home from "./views/Home.vue";
 
 Vue.use(Router);
+
+// const Home = () => import('./Home.vue');
+// const Admin = () => import('./Admin.vue');
+const Home = () => import("./views/Home.vue");
+const Producing = () => import("./views/Producing.vue");
+const ProductPrices = () => import("./views/ProductPrices.vue");
+const CourseSchedule = () => import("./views/CourseSchedule.vue");
 
 export default new Router({
   mode: "history",
@@ -24,17 +31,17 @@ export default new Router({
     {
       path: "/producing",
       name: "producing",
-      component: () => import("./views/Producing.vue")
+      component: Producing
     },
     {
       path: "/product-prices",
       name: "ProductPrices",
-      component: () => import("./views/ProductPrices.vue")
+      component: ProductPrices
     },
     {
       path: "/course-schedule",
       name: "CourseSchedule",
-      component: () => import("./views/CourseSchedule.vue")
+      component: CourseSchedule
     }
   ]
 });
